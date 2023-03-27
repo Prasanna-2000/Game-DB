@@ -1,0 +1,119 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url(login_form/images/login_background.png);
+    background-size: cover;
+}
+
+.image {
+    margin-left: 142px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+h1{
+   font-family: Montserrat-ExtraBold;
+    margin-left: 140px;
+    color: white;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup{
+    color: #333333;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.2;
+    width: 350px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 55px;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]{
+    font-family: Montserrat-Bold;
+    color: white;
+    background-color:#333333;
+    width: 415px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 0 30px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background-color:  rgba(0, 255, 255, 0.815);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.subs{
+    margin-left: 50px;
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+}
+
+.subs1{
+    font-family: Montserrat-Bold;
+    font-size: 18px;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(login_form/fonts/montserrat/Montserrat-Bold.ttf); 
+  }
+  
+@font-face {
+    font-family: Montserrat-ExtraBold;
+    src: url(login_form/fonts/montserrat/Montserrat-ExtraBold.ttf); 
+  }
+
+::placeholder{
+    color: rgba(128, 128, 128, 0.89);
+  }
+
+i{
+    color: gray;
+    margin-left: -390px;
+} 
+
+sig{
+    color: gray;
+    margin-left: -385px;
+}
+
+pas{
+    color: gray;
+    margin-left: -392px;
+}
+
+ph{
+    color: gray;
+    margin-left: -385px;
+    position: relative;
+    top: 5px;
+}
+
+
+.message{
+    text-align: center;
+    color:  rgb(168, 69, 69);
+    font-family: Montserrat-Bold;
+}

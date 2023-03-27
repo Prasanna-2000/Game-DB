@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.box1{
+    height: 80px;
+}
+
+.box2{
+    text-align: center;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 30px;
+}
+
+.box3{
+    background-color: blue;
+    height: 50px;
+    width: 1fr;
+}
+
+.box4{
+    background-color: rgba(48, 43, 43, 0.658);
+    height: 220px;
+    grid-area: box4;
+}
+
+.box6{
+    background-color:rgba(0, 255, 255, 0.623);
+    height: 145px;
+}
+
+.box7{
+    background-color:gray;
+    height: 120px;
+}
+
+header{
+    margin-bottom: 10px;
+    background-color: #141414;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+section{
+    background-color: coral;
+    height: 100px;
+    width: 1fr;
+}
+
+
+.logo{
+    float: left;
+    padding-top: 10px;
+    padding-left: 40px;
+    height: 70px;
+    width: 110px;
+    margin: 0 16px 16px 0;
+}
+
+.logo_text{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    color: white;
+    padding-top: 20px;
+}
+
+header div a{
+    text-decoration: none;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: white;
+}
+
+.game_img{
+    height: 90%;
+    padding-top: 25px;
+    padding-left: 50px;
+    float: left;
+}
+
+main div h1{
+    color: white;
+    padding-left: 500px;
+    padding-top: 30px;
+}
+
+main div p{
+    color: white;
+    padding-top: 10px;
+    padding-left: 500px;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+footer div img{
+    height: 79.9px;
+    opacity: 0.9;
+}
+
+footer div p{
+    text-align: center;
+    font-size: 10px;
+}
+
+.lo{
+    color: white;
+    text-decoration: none;
+}
+
+.ver{
+    background-image: linear-gradient(#FFFFFF, #FFFFFF);
+    background-size: 1.5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.log:hover{
+    color: rgba(0, 255, 255, 0.815);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+
+.box{
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.nodecoration{
+    text-decoration: none;
+}

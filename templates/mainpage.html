@@ -1,0 +1,187 @@
+{% load static %}
+{% load embed_video_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video game database</title>
+    <link rel="stylesheet" href="{% static 'mainpage.css' %}">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="box1">
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
+            <h1 class="logo_text">Video game database</h1>
+        </div>
+        <div class="box2">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Connect</a>
+            <a class="ver"></a>
+            <a>Hello, {{user.first_name}}</a>
+            <a class="log" href="../accounts/logout">logout</a>
+        </div>
+    </header>
+
+    <hr>
+
+    <main>
+        <div class="box3" 
+            style="background-image: url({{game.img.url}});
+            filter:blur(5px);
+            -webkit-filter: blur(5px);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 120%;"
+            
+        >
+        </div>
+
+        <div class="box4">
+            <img class="cover" src="{{game.img.url}}" alt="">
+            <h1 class="cover-text">{{game.name}}</h1>
+            <p class="cover-text1">{{game.desc}}</p>
+        </div>
+    </main>
+
+    <hr>
+    <hr>
+
+    <section>
+        <div class="allign">
+            <h1 class="heading">Information</h1>
+            <pre> </pre>
+            <table class="a">
+                <tr>
+                    <td>Developers</td>
+                    <td>{{info.dev}}</td>
+                </tr>
+                <tr>
+                    <td>Release date</td>
+                    <td>{{info.release_date}}</td>
+                </tr>
+                <tr>
+                    <td>Platforms</td>
+                    <td>{{info.platform}}</td>
+                </tr>
+                <tr>
+                    <td>Genre</td>
+                    <td>{{info.genre}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="allign">
+            <h1 class="heading">Minimum Requirements</h1>
+            <pre> </pre>
+            <table class="b">
+                <tr>
+                    <td>CPU</td>
+                    <td>{{requirement.cpu}}</td>
+                </tr>
+                <tr>
+                    <td>Graphics</td>
+                    <td>{{requirement.graphics}}</td>
+                </tr>
+                <tr>
+                    <td>DirectX</td>
+                    <td>{{requirement.directx}}</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>{{requirement.storage}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="allign">
+            <h1 class="heading">Details</h1>
+            <pre> </pre>
+            <table class="a">
+                <tr>
+                    <td>Resolution</td>
+                    <td>{{detail.resolution}}</td>
+                </tr>
+                <tr>
+                    <td>Sound</td>
+                    <td>{{detail.sound}}</td>
+                </tr>
+                <tr>
+                    <td>RTX Support</td>
+                    <td>{{detail.rtx_support}}</td>
+                </tr>
+                <tr>
+                    <td>Game Engine</td>
+                    <td>{{detail.game_engine}}</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <hr>
+
+    <aside>
+        <div class="rating">
+            <h1 class="heading">Rating</h1>
+            <pre> </pre>
+            <table class="c">
+                <tr>
+                    <td>Graphics</td>
+                    <td>{{rating.graphics}}</td>
+                </tr>
+                <tr>
+                    <td>Story-line</td>
+                    <td>{{rating.story_line}}</td>
+                </tr>
+                <tr>
+                    <td>Character Development</td>
+                    <td>{{rating.character}}</td>
+                </tr>
+                <tr>
+                    <td>Difficulty</td>
+                    <td>{{rating.difficulty}}</td>
+                </tr>
+            </table>
+            <pre></pre>
+            <article>
+                <div class="rating1">
+                    <h3>{{rating.steam}}/10</h3>
+                    <h3>Steam</h3>
+                </div>
+                <div class="rating2">
+                    <h3>{{rating.ign}}/10</h3>
+                    <h3>IGN.com</h3>
+                </div>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="heading">
+            <h1>Trailer</h1>
+        </div>
+        <pre> </pre>
+        <div class="emb">
+            {% video info.video '720x405' %}
+        </div>
+    </aside>
+
+    <footer>
+        <div class="box6">
+            <img src="{% static 'images/cus_footer.png' %}" alt="">
+            <p>.</p>
+            <p>Copyright 1999-2020 by Refsnes Data</p>
+            <p>.</p>
+            <p>By Prasanna and Tilak</p> 
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video game database</title>
+    <link rel="stylesheet" href="{% static 'game_page_style.css' %}">
+</head>
+
+
+
+<body>
+        
+   <header>
+        <div class="box1">
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
+            <h1 class="logo_text">Video game database</h1>
+        </div>
+        <div class="box2">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Connect</a>
+            <a class="ver"></a>
+            <a>Hello, {{user.first_name}}</a>
+            <a class="log" href="../accounts/logout">logout</a>
+        </div>
+   </header>
+
+   <!-- <nav>
+       <div class="box3">
+           <h1>box3_search(optional)</h1>
+       </div>
+   </nav> -->
+
+   <main>
+
+       {% for game in games %}
+
+       <div class="box">
+       <div class="box4">
+           <img class="game_img" src="{{game.img.url}}" alt="">
+           <a class="nodecoration" href="{% url 'mainpage' game.id %}">
+                <h1>{{game.name}}</h1>
+           </a>
+           <p>{{game.desc}}</p>
+       </div>
+
+        </div>
+
+       {% endfor %}
+
+   </main>
+
+   <!-- <section>
+       <h1>box5_page no(optional)</h1>
+   </section> -->
+
+   <footer>
+       <div class="box6">
+           <img src="{% static 'images/cus_footer.png' %}" alt="">
+           <p>.</p>
+           <p>Copyright 1999-2020 by Refsnes Data</p>
+           <p>.</p>
+           <p>By Prasanna and Tilak</p> 
+       </div>
+   </footer>
+
+
+</body>
+</html>

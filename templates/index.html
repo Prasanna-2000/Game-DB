@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video game database</title>
+    <link rel="stylesheet" href="{% static 'index_style.css' %}">
+</head>
+
+
+
+<body>
+    
+    <div>
+
+        <header>
+
+            <div class="top_menu">
+                <a href="{% static '#' %}">Home</a>
+                <a href="{% static '#' %}">About</a>
+                <a href="{% static '#' %}">Services</a>
+                <a href="{% static '#' %}">Team</a>
+                <a href="{% static '#' %}">Connect</a>
+            </div>
+
+            <img src="{% static 'images/logo.png' %}" alt="">
+            <h1>VIDEO GAME DATABASE</h1>
+            <h2>A guide to your gaming world</h2>
+
+        </header>
+
+        <nav></nav>
+
+        <main>
+
+            <div1 class="two_div">
+                <p>&ldquo; Video games foster the mindset that allows creativity to grow	&rdquo;</p>
+                <h1>- NOLAN BUSHNELL</h1>
+            </div1>
+
+            <div2 class="two_div">
+                <h1 class="login">login to continue</h1>
+                <a href="accounts/login">
+                    <button class="btn">login</button>
+                </a>
+
+                <h2 class="login">Don't have a account?</h2>
+                <a href="accounts/signup">
+                    <button class="btn">Sign up</button>
+                </a>
+            </div2>
+
+        </main>
+
+        <footer>
+
+                <div>
+
+                    <h1>Connect with us</h1>
+                    <img class="insta" src="{% static 'images/intagram.png' %}" alt="">
+                    <img class="face" src="{% static 'images/facebook.png' %}" alt="">
+                    <img class="snap" src="{% static 'images/snap.png' %}" alt="">
+                    
+                </div>
+
+                
+                <section>
+                    <p>.</p>
+                    <p>Copyright 1999-2020 by Refsnes Data</p>
+                    <p>By Prasanna and Tilak</p>    
+                </section>
+           
+           
+        </footer>
+
+    </div>
+
+
+</body>
+</html>

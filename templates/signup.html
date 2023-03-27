@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'signup_style.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href= 
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> -->
+
+</head>
+
+
+<body>
+
+    <div class="box">
+        <img class="image" src="{% static 'images/logo.png' %}" alt="logo">
+        <h1>Signup</h1>
+            <form action="signup" method="POST">
+                {% csrf_token %}
+
+                <input class="signup" type="text" name="fname"  placeholder="First name" onfocus="this.placeholder=''" onblur="this.placeholder='First sname'">
+                <i class="fa fa-user fa-lg fa-fw"></i><br><br>
+
+                <input class="signup" type="text" name="lname"  placeholder="Last name" onfocus="this.placeholder=''" onblur="this.placeholder='Last name'">
+                <i class="fa fa-user fa-lg fa-fw"></i><br><br>
+
+                <input class="signup" type="text" name="uname"  placeholder="Username" required onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
+                <i class="fa fa-user fa-lg fa-fw"></i><br><br>
+
+                <input class="signup" type="email" name="email" placeholder="Email id" required onfocus="this.placeholder=''" onblur="this.placeholder='Email id'">
+                <sig class="fa fa-envelope-open"></sig><br><br>
+
+                <input class="signup" type="password" name="password1" placeholder="Password" required onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
+                <pas class="fa fa-lock fa-lg fa-fw"></pas><br><br>
+                
+                <input class="signup" type="password" name="password2" placeholder="Confirm password" required onfocus="this.placeholder=''" onblur="this.placeholder='Confirm password'">
+                <pas class="fa fa-lock fa-lg fa-fw"></pas><br><br>
+                
+                <!-- <input class="signup" type="number" name="pnum" placeholder="Phone no" onfocus="this.placeholder=''" onblur="this.placeholder='Phone no'">
+                <ph class="fa fa-mobile fa-2x"></ph><br><br>
+                
+                <input class="subs" type="checkbox" name="subscribe">
+                <label class="subs1" for="subscribe">subscribe to our news letter</label><br><br> -->
+                
+                <input type="submit" name="submit"> 
+            </form>
+
+            <div>
+                {% for message in messages %}
+                <p class="message">{{message}}</p>
+                {% endfor %}
+            </div>
+
+    </div>
+
+
+
+
+</body>
+</html>
